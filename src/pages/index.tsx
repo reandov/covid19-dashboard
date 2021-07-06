@@ -6,10 +6,6 @@ export default function Home() {
       <Head>
         <title>COVID-19 | Dashboard</title>
       </Head>
-
-      <main>
-        <h1>Hello, World!</h1>
-      </main>
     </div>
   );
 }
