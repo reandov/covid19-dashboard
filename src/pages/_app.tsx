@@ -1,12 +1,13 @@
 // React - Next Imports
 import type { AppProps } from "next/app";
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Libraries
 import { ThemeProvider } from "styled-components";
 
-// External Components
+// Internal Components
 import { Header } from "../components/Header";
+import { LocationPicker } from "../components/LocationPicker";
 
 // Styling
 import GlobalStyle from "../styles/global";
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header toggleTheme={toggleTheme} />
+      <LocationPicker />
       <Component {...pageProps} />
     </ThemeProvider>
   );
