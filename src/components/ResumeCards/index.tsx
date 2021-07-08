@@ -17,7 +17,16 @@ export function ResumeCards({
   accumulated_deaths,
   new_cases,
   new_deaths,
+  last_updated,
 }: ICardData) {
+  function formatDate(date: string) {
+    const year = date.split("-")[0];
+    const month = date.split("-")[1];
+    const day = date.split("-")[2];
+
+    return `${day}/${month}/${year}`;
+  }
+
   return (
     <Container>
       <Card>
@@ -30,6 +39,12 @@ export function ResumeCards({
         <CardContent>
           <p>ÓBITOS ACUMULADOS</p>
           <h2>{convertToReadableNumber(accumulated_deaths?.slice(-1)[0])}</h2>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <p>DATA DE ATUALIZAÇÃO</p>
+          <h2>{formatDate(last_updated)}</h2>
         </CardContent>
       </Card>
       <Card>

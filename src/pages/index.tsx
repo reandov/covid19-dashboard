@@ -6,6 +6,8 @@ import Head from "next/head";
 import { Loading } from "../components/Loading";
 import { ResumeCards } from "../components/ResumeCards";
 import { DefaultCharts } from "../components/DefaultCharts";
+import { BarChart } from "../components/Charts/BarChart/BarChart";
+import { Footer } from "../components/Footer";
 
 // Services
 import { database } from "../services/firebase";
@@ -23,16 +25,17 @@ import {
   ChartContainer,
   Chart,
 } from "../components/DefaultCharts/styles";
-import { LineChart } from "../components/Charts/LineChart/LineChart";
-import { BarChart } from "../components/Charts/BarChart/BarChart";
-import { Footer } from "../components/Footer";
 
 export default function Home() {
-  const [nationalData, setNationalData] = useState<INationalData>();
-  const [epiWeeksData, setEpiWeeksData] = useState<IEpidemiologicalData>();
-  const [dailyData, setDailyData] = useState<IDailyData>();
+  const [nationalData, setNationalData] = useState<INationalData>(
+    {} as INationalData
+  );
+  const [epiWeeksData, setEpiWeeksData] = useState<IEpidemiologicalData>(
+    {} as IEpidemiologicalData
+  );
+  const [dailyData, setDailyData] = useState<IDailyData>({} as IDailyData);
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   async function getDataFromDatabase() {
     setLoading(true);
@@ -66,6 +69,7 @@ export default function Home() {
             accumulated_deaths={nationalData?.accumulated_num_deaths}
             new_cases={nationalData?.new_num_cases}
             new_deaths={nationalData?.new_num_deaths}
+            last_updated={nationalData?.date.slice(-1)[0]}
           />
           <DefaultCharts
             accumulated_cases={nationalData?.accumulated_num_cases}
@@ -112,6 +116,26 @@ export default function Home() {
                   seriesName="Novos Óbitos p/ Estado"
                   seriesData={dailyData?.new_deaths}
                   seriesCategories={dailyData?.state}
+                />
+              </Chart>
+            </ChartContainer>
+            <ChartContainer>
+              <Chart>
+                <BarChart
+                  chartTitle="Novos Casos p/ Semana Epidemiológica"
+                  chartColors={["#116ddd"]}
+                  seriesName="Novos Casos p/ Semana Epidemiológica"
+                  seriesData={epiWeeksData?.new_cases}
+                  seriesCategories={epiWeeksData?.epidemiological_week}
+                />
+              </Chart>
+              <Chart>
+                <BarChart
+                  chartTitle="Novos Óbitos p/ Semana Epidemiológica"
+                  chartColors={["#6b7077"]}
+                  seriesName="Novos Óbitos p/ Semana Epidemiológica"
+                  seriesData={epiWeeksData?.new_deaths}
+                  seriesCategories={epiWeeksData?.epidemiological_week}
                 />
               </Chart>
             </ChartContainer>

@@ -23,7 +23,7 @@ export function Header({ toggleTheme }: HeaderProps) {
   return (
     <Container>
       <Heading>
-        <Image src={icon} width={48} height={48} />
+        <Image src={icon} width={48} height={48} alt="Ícone do Coronavírus" />
         <p>COVID 19 - Dashboard</p>
       </Heading>
       <Switch

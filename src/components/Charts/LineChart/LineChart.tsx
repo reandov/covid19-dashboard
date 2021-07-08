@@ -1,4 +1,5 @@
 // React - Next Importations
+import { useContext } from "react";
 import dynamic from "next/dynamic";
 
 // External Components
@@ -9,6 +10,8 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 // Types
 import { IChartData } from "../../../utils/types/types";
 
+import { ThemeContext } from "styled-components";
+
 export function LineChart({
   chartTitle,
   chartColors,
@@ -16,6 +19,7 @@ export function LineChart({
   seriesData,
   seriesCategories,
 }: IChartData) {
+  const themeContext = useContext(ThemeContext);
   const series = [
     {
       name: seriesName,
@@ -113,22 +117,26 @@ export function LineChart({
     },
     stroke: {
       curve: "smooth",
-      width: 2,
+      width: 1,
     },
+
     yaxis: {
       labels: {
-        formatter: function (val, _) {
+        formatter: function (val: number) {
           return Intl.NumberFormat("pt-br").format(val);
         },
         style: {
           fontSize: 12,
+          colors: themeContext.colors.text,
         },
       },
       title: {
         text: seriesName,
         style: {
-          fontSize: 12,
+          fontSize: 14,
           fontWeight: 500,
+          fontFamily: "Roboto",
+          color: themeContext.colors.text,
         },
       },
     },
@@ -137,16 +145,22 @@ export function LineChart({
       categories: seriesCategories,
       labels: {
         datetimeUTC: true,
+        style: {
+          colors: themeContext.colors.text,
+        },
       },
       title: {
         text: "Data",
         style: {
-          fontSize: 12,
+          fontFamily: "Roboto",
+          fontSize: 14,
           fontWeight: 500,
+          color: themeContext.colors.text,
         },
       },
     },
     tooltip: {
+      theme: "dark",
       x: {
         format: "dd/MM/yy",
       },
@@ -161,7 +175,7 @@ export function LineChart({
       style: {
         fontSize: "20px",
         fontWeight: "bold",
-        color: "#263238",
+        color: themeContext.colors.text,
       },
     },
   };

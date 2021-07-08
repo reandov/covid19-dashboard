@@ -1,5 +1,6 @@
 // React - Next Importations
 import React from "react";
+import Image from "next/image";
 
 // Library Components
 
@@ -30,9 +31,9 @@ export function Footer() {
         <Source>
           Fonte dos dados:{" "}
           <a href="https://brasil.io/covid19/">
-            <img
+            <Image
               src="https://brasil.io/static/img/logo/logo_br-io_fundo-escuro.bbbaf8e79edf.png"
-              alt=""
+              alt="Logo do Brasil.IO"
               width="210px"
               height="40.5"
             />

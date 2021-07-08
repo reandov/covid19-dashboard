@@ -1,4 +1,5 @@
 // React - Next Importations
+import { useContext } from "react";
 import dynamic from "next/dynamic";
 
 // External Components
@@ -9,6 +10,9 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 // Types
 import { IChartData } from "../../../utils/types/types";
 
+import { ThemeContext } from "styled-components";
+import dark from "../../../styles/themes/dark";
+
 export function BarChart({
   chartTitle,
   chartColors,
@@ -16,6 +20,7 @@ export function BarChart({
   seriesData,
   seriesCategories,
 }: IChartData) {
+  const themeContext = useContext(ThemeContext);
   const series = [
     {
       name: seriesName,
@@ -52,10 +57,28 @@ export function BarChart({
         colors: ["#f7b707"],
       },
     },
+    tooltip: {
+      theme: "dark",
+    },
 
     xaxis: {
       categories: seriesCategories,
       position: "bottom",
+      labels: {
+        datetimeUTC: true,
+        style: {
+          colors: themeContext.colors.text,
+        },
+      },
+      title: {
+        text: "Data",
+        style: {
+          fontFamily: "Roboto",
+          fontSize: 14,
+          fontWeight: 500,
+          color: themeContext.colors.text,
+        },
+      },
       axisBorder: {
         show: false,
       },
@@ -86,10 +109,23 @@ export function BarChart({
       axisTicks: {
         show: false,
       },
+      title: {
+        text: seriesName,
+        style: {
+          fontSize: 14,
+          fontWeight: 500,
+          fontFamily: "Roboto",
+          color: themeContext.colors.text,
+        },
+      },
       labels: {
         show: true,
-        formatter: function (val, _) {
+        formatter: function (val: number) {
           return Intl.NumberFormat("pt-br").format(val);
+        },
+        style: {
+          fontSize: 12,
+          colors: themeContext.colors.text,
         },
       },
     },

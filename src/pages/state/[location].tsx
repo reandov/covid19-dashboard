@@ -16,7 +16,7 @@ export default function Location() {
   const router = useRouter();
   const { location } = router.query;
 
-  const [stateData, setStateData] = useState<IStateData>();
+  const [stateData, setStateData] = useState<IStateData>({} as IStateData);
 
   const [loading, setLoading] = useState(true);
 
@@ -28,7 +28,6 @@ export default function Location() {
         setStateData(snapshot.val() as IStateData);
       });
     console.log(stateData);
-
     setLoading(false);
   }
 
@@ -50,6 +49,7 @@ export default function Location() {
             accumulated_deaths={stateData?.accumulated_num_deaths}
             new_cases={stateData?.new_num_cases}
             new_deaths={stateData?.new_num_deaths}
+            last_updated={stateData?.date.slice(-1)[0]}
           />
           <DefaultCharts
             accumulated_cases={stateData?.accumulated_num_cases}
