@@ -1,8 +1,6 @@
 // React - Next Importations
 import React from "react";
 
-// Library Components
-
 // Functions
 import { convertToReadableNumber } from "../../utils/functions/functions";
 
@@ -19,7 +17,7 @@ export function ResumeCards({
   new_deaths,
   last_updated,
 }: ICardData) {
-  function formatDate(date: string) {
+  function formatDate(date: string): string {
     const year = date.split("-")[0];
     const month = date.split("-")[1];
     const day = date.split("-")[2];

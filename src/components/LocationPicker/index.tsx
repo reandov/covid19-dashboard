@@ -1,6 +1,11 @@
+// React - Next Imports
 import { ChangeEvent, useState } from "react";
 import { useRouter } from "next/router";
+
+// Types
 import { ILocation } from "../../utils/types/types";
+
+// Styles
 import { Container, Select, Option } from "./styles";
 
 export function LocationPicker() {
@@ -39,12 +44,12 @@ export function LocationPicker() {
     { value: "to", label: "Tocantins" },
   ];
 
-  function handleChange(event: ChangeEvent<HTMLSelectElement>) {
+  function handleChange(event: ChangeEvent<HTMLSelectElement>): void {
     setLocation(event.target.value);
     redirectTo(event.target.value);
   }
 
-  function redirectTo(location: string) {
+  function redirectTo(location: string): void {
     location === "br" ? router.push("/") : router.push(`/state/${location}`);
   }
 

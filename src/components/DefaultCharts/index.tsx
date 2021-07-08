@@ -1,9 +1,7 @@
 // React - Next Importations
 import React from "react";
 
-// Library Components
-
-// External Components
+// Internal Components
 import { LineChart } from "../Charts/LineChart/LineChart";
 
 // Types

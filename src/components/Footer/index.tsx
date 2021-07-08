@@ -2,8 +2,6 @@
 import React from "react";
 import Image from "next/image";
 
-// Library Components
-
 // Assets
 import icon from "../../../public/logo_brasilio.png";
 

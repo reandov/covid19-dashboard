@@ -1,6 +1,8 @@
+// Firebase
 import firebase from "firebase/app";
 import "firebase/database";
 
+// Firebase Configuration from Environment Variables
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
@@ -12,10 +14,13 @@ const firebaseConfig = {
   measurementId: process.env.MEASUREMENT_ID,
 };
 
+// Initialize Connection
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
+// Connecting to Database
 const database = firebase.database();
 
+// Exporting
 export { firebase, database };

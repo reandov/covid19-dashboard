@@ -1,10 +1,12 @@
 // React - Next Imports
-import Image from "next/image";
 import { useContext } from "react";
+import Image from "next/image";
 
-// Libraries
-import Switch from "react-switch";
+// Internal Contexts and Custom Hooks
 import { ThemeContext } from "styled-components";
+
+// External Packages Imports
+import Switch from "react-switch";
 
 // Assets
 import icon from "../../../public/covid_icon.svg";
@@ -13,11 +15,9 @@ import icon from "../../../public/covid_icon.svg";
 import { Container, Heading } from "./styles";
 
 // Types and Interfaces
-interface HeaderProps {
-  toggleTheme(): void;
-}
+import { IHeaderProps } from "../../utils/types/types";
 
-export function Header({ toggleTheme }: HeaderProps) {
+export function Header({ toggleTheme }: IHeaderProps) {
   const { title } = useContext(ThemeContext);
 
   return (

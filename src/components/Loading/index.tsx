@@ -1,6 +1,10 @@
+// React - Next Imports
 import React from "react";
+
+// External Packages Imports
 import Loader from "react-loader-spinner";
 
+// Styles
 import { Container } from "./styles";
 
 export function Loading() {
@@ -14,7 +18,7 @@ export function Loading() {
         alignItems: "center",
       }}
     >
-      <Loader type="Oval" color="#007ca5" height={100} width={100} />
+      <Loader type="Oval" color="#009ae2" height={100} width={100} />
     </Container>
   );
 }

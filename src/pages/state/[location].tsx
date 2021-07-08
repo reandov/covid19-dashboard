@@ -1,6 +1,11 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
+// React - Next Imports
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
+
+// External Packages Imports
+import { useRouter } from "next/router";
+
+// Internal Components
 import { DefaultCharts } from "../../components/DefaultCharts";
 import { Footer } from "../../components/Footer";
 import { Loading } from "../../components/Loading";

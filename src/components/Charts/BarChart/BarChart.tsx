@@ -2,16 +2,16 @@
 import { useContext } from "react";
 import dynamic from "next/dynamic";
 
-// External Components
+// Internal Contexts and Custom Hooks
+import { ThemeContext } from "styled-components";
+
+// Internal Components
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
 // Types
 import { IChartData } from "../../../utils/types/types";
-
-import { ThemeContext } from "styled-components";
-import dark from "../../../styles/themes/dark";
 
 export function BarChart({
   chartTitle,

@@ -2,6 +2,9 @@
 import { useContext } from "react";
 import dynamic from "next/dynamic";
 
+// Internal Contexts and Custom Hooks
+import { ThemeContext } from "styled-components";
+
 // External Components
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -9,8 +12,6 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 
 // Types
 import { IChartData } from "../../../utils/types/types";
-
-import { ThemeContext } from "styled-components";
 
 export function LineChart({
   chartTitle,
@@ -54,7 +55,7 @@ export function LineChart({
       height: 350,
       type: "area",
       animations: {
-        enabled: true,
+        enabled: false,
       },
       locales: [
         {
@@ -152,7 +153,7 @@ export function LineChart({
         },
       },
       title: {
-        text: "Data",
+        text: yaxisTitle,
         style: {
           fontFamily: "Roboto",
           fontSize: 14,

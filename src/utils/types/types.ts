@@ -1,24 +1,3 @@
-export interface ILocation {
-  value: string;
-  label: string;
-}
-
-export interface ICardData {
-  accumulated_cases: number[];
-  accumulated_deaths: number[];
-  new_cases: number[];
-  new_deaths: number[];
-  last_updated: string;
-}
-
-export interface IDefaultChartData {
-  accumulated_cases: number[];
-  accumulated_deaths: number[];
-  new_cases: number[];
-  new_deaths: number[];
-  date: string[];
-}
-
 export interface INationalData {
   accumulated_num_cases: number[];
   accumulated_num_deaths: number[];
@@ -57,7 +36,22 @@ export interface IStateData {
   country: string[];
   state: string[];
 }
+export interface ILocation {
+  value: string;
+  label: string;
+}
 
+export interface IHeaderProps {
+  toggleTheme(): void;
+}
+
+export interface ICardData {
+  accumulated_cases: number[];
+  accumulated_deaths: number[];
+  new_cases: number[];
+  new_deaths: number[];
+  last_updated: string;
+}
 export interface IChartData {
   chartTitle: string;
   xaxisTitle: string;
@@ -65,4 +59,12 @@ export interface IChartData {
   chartColors: string[];
   seriesData: number[];
   seriesCategories: string[] | number[];
+}
+
+export interface IDefaultChartData {
+  accumulated_cases: number[];
+  accumulated_deaths: number[];
+  new_cases: number[];
+  new_deaths: number[];
+  date: string[];
 }
