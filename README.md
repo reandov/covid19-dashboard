@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div style="display: flex; align-items: center; justify-content: center">
+  <img src='public/covid_icon.svg' width=42 height=42/>
+  <h1 style="margin-top: 25px; margin-left: 15px;">COVID-19 Panel</h1>
+</div>
+<br/>
 
-## Getting Started
+## 📝 About the project
 
-First, run the development server:
+        Humanity at the time I'm writing this peace of information is, unfortunately, living through the SARS‑CoV‑2 (Coronavirus) pandemic. My goal with this project is to help with and spread **correct and reliable** information to the people, mostly living in Brazil, although this project can also be helpful to others outside of it's living country.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📚 How this project was created
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+        Since the beginning of the pandemic in March of 2020 I've started learning Data Science with a real world dataset. Since then, I was creating numerous charts and spreadsheets, and, of course, I was having a lot of insights.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+        At the beginning I was getting data from the Minister of Health of Brazil and for reliability of the data, basically a lot of researchers changed the data source, including me. I don't remember exactly when I've changed the source but the actual **source is provided** by [Brasil.io](https://brasil.io/covid19/).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+        After a long period only working with Python, static chart images and spreadsheets I've decided to create an online dashboard, from where I was able to share my work more dynamically.
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+## 💻 Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- React, NextJS, Firebase, TypeScript, Styled Components;
+- Node, Yarn;
+- Git, GitHub and Vercel;
+  <br/><br/>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🌐 References
 
-## Deploy on Vercel
+- [Brasil.io](https://brasil.io/covid19/)
+- [COVID-19 Python Scripts](https://github.com/evnrodr/covid19-scripts)
+  <br/><br/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📫 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can reach me on:
+
+- [GitHub](https://github.com/evnrodr)
+- [LinkedIn](https://www.linkedin.com/in/evnrodr/)
+- [Twitter](https://twitter.com/evnrodr)
