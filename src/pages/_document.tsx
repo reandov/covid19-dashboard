@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-
+          <link rel="shortcut icon" href="covid_icon.svg" type="image/png" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"

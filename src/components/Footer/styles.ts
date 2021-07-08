@@ -41,7 +41,7 @@ export const Source = styled.p`
   justify-content: space-around;
   align-items: center;
 
-  img {
+  a {
     margin-left: 1rem;
   }
 

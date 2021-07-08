@@ -5,6 +5,7 @@ export const Container = styled.div`
   justify-content: center;
 
   padding: 0.8rem;
+  font-family: "Roboto";
 `;
 
 export const Select = styled.select`
@@ -26,4 +27,6 @@ export const Option = styled.option`
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+
+  font-family: "Roboto";
 `;

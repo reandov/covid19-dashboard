@@ -11,6 +11,10 @@ export const Container = styled.div`
   box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.1);
 
   background: ${(props) => props.theme.colors.primary};
+
+  p {
+    font-family: "Roboto";
+  }
 `;
 
 export const Heading = styled.div`

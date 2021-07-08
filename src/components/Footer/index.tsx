@@ -4,6 +4,9 @@ import Image from "next/image";
 
 // Library Components
 
+// Assets
+import icon from "../../../public/logo_brasilio.png";
+
 // Styles
 import { FooterContainer, Container, Profile, Source } from "./styles";
 
@@ -32,7 +35,7 @@ export function Footer() {
           Fonte dos dados:{" "}
           <a href="https://brasil.io/covid19/">
             <Image
-              src="https://brasil.io/static/img/logo/logo_br-io_fundo-escuro.bbbaf8e79edf.png"
+              src={icon}
               alt="Logo do Brasil.IO"
               width="210px"
               height="40.5"
