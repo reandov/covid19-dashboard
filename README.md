@@ -1,5 +1,6 @@
-<img style="float: left;" src="public/covid_icon.svg" width=38>
-<h1 style="text-align:left">&nbsp&nbspCOVID-19 Panel</h1>
+<img style="float: left; margin-right:12px" src="public/covid_icon.svg" width=38 />
+
+# COVID-19 Panel
 
 <br/>
 
