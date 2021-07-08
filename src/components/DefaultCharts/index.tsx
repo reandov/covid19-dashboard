@@ -26,7 +26,8 @@ export function DefaultCharts({
           <LineChart
             chartTitle="Casos Acumulados"
             chartColors={["#116ddd"]}
-            seriesName="Casos Acumulados"
+            xaxisTitle="Quantidade de Casos"
+            yaxisTitle="Data"
             seriesData={accumulated_cases}
             seriesCategories={date}
           />
@@ -35,7 +36,8 @@ export function DefaultCharts({
           <LineChart
             chartTitle="Óbitos Acumulados"
             chartColors={["#6b7077"]}
-            seriesName="Óbitos Acumulados"
+            xaxisTitle="Quantidade de Óbitos"
+            yaxisTitle="Data"
             seriesData={accumulated_deaths}
             seriesCategories={date}
           />
@@ -47,7 +49,8 @@ export function DefaultCharts({
           <LineChart
             chartTitle="Novos Casos | 24h"
             chartColors={["#116ddd"]}
-            seriesName="Novos Casos | 24h"
+            xaxisTitle="Quantidade Casos"
+            yaxisTitle="Data"
             seriesData={new_cases}
             seriesCategories={date}
           />
@@ -56,7 +59,8 @@ export function DefaultCharts({
           <LineChart
             chartTitle="Novos Óbitos | 24h"
             chartColors={["#6b7077"]}
-            seriesName="Novos Óbitos | 24h"
+            xaxisTitle="Quantidade Óbitos"
+            yaxisTitle="Data"
             seriesData={new_deaths}
             seriesCategories={date}
           />

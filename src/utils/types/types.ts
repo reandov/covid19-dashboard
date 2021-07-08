@@ -60,8 +60,9 @@ export interface IStateData {
 
 export interface IChartData {
   chartTitle: string;
+  xaxisTitle: string;
+  yaxisTitle: string;
   chartColors: string[];
-  seriesName: string;
   seriesData: number[];
   seriesCategories: string[] | number[];
 }

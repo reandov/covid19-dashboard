@@ -83,8 +83,9 @@ export default function Home() {
               <Chart>
                 <BarChart
                   chartTitle="Casos Acumulados p/ Estado"
+                  xaxisTitle="Quantidade de Casos"
+                  yaxisTitle="Estados"
                   chartColors={["#116ddd"]}
-                  seriesName="Casos Acumulados p/ Estado"
                   seriesData={dailyData?.accumulated_cases}
                   seriesCategories={dailyData?.state}
                 />
@@ -92,8 +93,9 @@ export default function Home() {
               <Chart>
                 <BarChart
                   chartTitle="Óbitos Acumulados p/ Estado"
+                  xaxisTitle="Quantidade de Óbitos"
+                  yaxisTitle="Estados"
                   chartColors={["#6b7077"]}
-                  seriesName="Óbitos Acumulados p/ Estado"
                   seriesData={dailyData?.accumulated_deaths}
                   seriesCategories={dailyData?.state}
                 />
@@ -103,8 +105,9 @@ export default function Home() {
               <Chart>
                 <BarChart
                   chartTitle="Novos Casos p/ Estado"
+                  xaxisTitle="Quantidade de Novos Casos"
+                  yaxisTitle="Estados"
                   chartColors={["#116ddd"]}
-                  seriesName="Novos Casos p/ Estado"
                   seriesData={dailyData?.new_cases}
                   seriesCategories={dailyData?.state}
                 />
@@ -112,8 +115,9 @@ export default function Home() {
               <Chart>
                 <BarChart
                   chartTitle="Novos Óbitos p/ Estado"
+                  xaxisTitle="Quantidade de Óbitos"
+                  yaxisTitle="Estados"
                   chartColors={["#6b7077"]}
-                  seriesName="Novos Óbitos p/ Estado"
                   seriesData={dailyData?.new_deaths}
                   seriesCategories={dailyData?.state}
                 />
@@ -123,8 +127,9 @@ export default function Home() {
               <Chart>
                 <BarChart
                   chartTitle="Novos Casos p/ Semana Epidemiológica"
+                  xaxisTitle="Quantidade de Novos Casos"
+                  yaxisTitle="Semanas Epidemiológicas - Ano"
                   chartColors={["#116ddd"]}
-                  seriesName="Novos Casos p/ Semana Epidemiológica"
                   seriesData={epiWeeksData?.new_cases}
                   seriesCategories={epiWeeksData?.epidemiological_week}
                 />
@@ -132,8 +137,9 @@ export default function Home() {
               <Chart>
                 <BarChart
                   chartTitle="Novos Óbitos p/ Semana Epidemiológica"
+                  xaxisTitle="Quantidade de Novos Óbitos"
+                  yaxisTitle="Semanas Epidemiológicas - Ano"
                   chartColors={["#6b7077"]}
-                  seriesName="Novos Óbitos p/ Semana Epidemiológica"
                   seriesData={epiWeeksData?.new_deaths}
                   seriesCategories={epiWeeksData?.epidemiological_week}
                 />

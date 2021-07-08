@@ -15,14 +15,16 @@ import { ThemeContext } from "styled-components";
 export function LineChart({
   chartTitle,
   chartColors,
-  seriesName,
+  xaxisTitle,
+  yaxisTitle,
   seriesData,
   seriesCategories,
 }: IChartData) {
   const themeContext = useContext(ThemeContext);
+
   const series = [
     {
-      name: seriesName,
+      name: xaxisTitle,
       data: seriesData,
     },
   ];
@@ -131,7 +133,7 @@ export function LineChart({
         },
       },
       title: {
-        text: seriesName,
+        text: xaxisTitle,
         style: {
           fontSize: 14,
           fontWeight: 500,

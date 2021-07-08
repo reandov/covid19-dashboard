@@ -16,14 +16,15 @@ import dark from "../../../styles/themes/dark";
 export function BarChart({
   chartTitle,
   chartColors,
-  seriesName,
+  xaxisTitle,
+  yaxisTitle,
   seriesData,
   seriesCategories,
 }: IChartData) {
   const themeContext = useContext(ThemeContext);
   const series = [
     {
-      name: seriesName,
+      name: xaxisTitle,
       data: seriesData,
     },
   ];
@@ -71,7 +72,7 @@ export function BarChart({
         },
       },
       title: {
-        text: "Data",
+        text: yaxisTitle,
         style: {
           fontFamily: "Roboto",
           fontSize: 14,
@@ -110,7 +111,7 @@ export function BarChart({
         show: false,
       },
       title: {
-        text: seriesName,
+        text: xaxisTitle,
         style: {
           fontSize: 14,
           fontWeight: 500,
