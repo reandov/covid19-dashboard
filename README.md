@@ -1,22 +1,21 @@
-<div style="display: flex; align-items: center; justify-content: center">
-  <img src='public/covid_icon.svg' width=42 height=42/>
-  <h1 style="margin-top: 25px; margin-left: 15px;">COVID-19 Panel</h1>
-</div>
+<img style="float: left;" src="public/covid_icon.svg" width=38>
+<h1 style="text-align:left">&nbsp&nbspCOVID-19 Panel</h1>
+
 <br/>
 
 ## 📝 About the project
 
-        Humanity at the time I'm writing this peace of information is, unfortunately, living through the SARS‑CoV‑2 (Coronavirus) pandemic. My goal with this project is to help with and spread **correct and reliable** information to the people, mostly living in Brazil, although this project can also be helpful to others outside of it's living country.
+Humanity at the time I'm writing this peace of information is, unfortunately, living through the SARS‑CoV‑2 (Coronavirus) pandemic. My goal with this project is to help with and spread **correct and reliable** information to the people, mostly living in Brazil, although this project can also be helpful to others outside of it's living country.
 
 <br/>
 
 ## 📚 How this project was created
 
-        Since the beginning of the pandemic in March of 2020 I've started learning Data Science with a real world dataset. Since then, I was creating numerous charts and spreadsheets, and, of course, I was having a lot of insights.
+Since the beginning of the pandemic in March of 2020 I've started learning Data Science with a real world dataset. Since then, I was creating numerous charts and spreadsheets, and, of course, I was having a lot of insights.
 
-        At the beginning I was getting data from the Minister of Health of Brazil and for reliability of the data, basically a lot of researchers changed the data source, including me. I don't remember exactly when I've changed the source but the actual **source is provided** by [Brasil.io](https://brasil.io/covid19/).
+At the beginning I was getting data from the Minister of Health of Brazil and for reliability of the data, basically a lot of researchers changed the data source, including me. I don't remember exactly when I've changed the source but the actual **source is provided** by [Brasil.io](https://brasil.io/covid19/).
 
-        After a long period only working with Python, static chart images and spreadsheets I've decided to create an online dashboard, from where I was able to share my work more dynamically.
+After a long period only working with Python, static chart images and spreadsheets I've decided to create an online dashboard, from where I was able to share my work more dynamically.
 
 <br/>
 
