@@ -24,7 +24,7 @@ export function Header({ toggleTheme }: IHeaderProps) {
     <Container>
       <Heading>
         <Image src={icon} width={48} height={48} alt="Ícone do Coronavírus" />
-        <p>COVID 19 - Dashboard</p>
+        <p>Painel COVID-19</p>
       </Heading>
       <Switch
         onChange={toggleTheme}

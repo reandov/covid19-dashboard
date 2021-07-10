@@ -51,7 +51,7 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="Keywords" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-          <meta name="theme-color" content="#317EFB" />
+          <meta name="theme-color" content="#e6e6e6" />
           <link rel="shortcut icon" href="covid_icon.svg" type="image/png" />
           <link
             rel="stylesheet"

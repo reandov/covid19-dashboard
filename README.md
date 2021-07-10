@@ -1,5 +1,3 @@
-<img style="float: left; margin-right:12px" src="public/covid_icon.svg" width=38 />
-
 # COVID-19 Panel
 
 <br/>
